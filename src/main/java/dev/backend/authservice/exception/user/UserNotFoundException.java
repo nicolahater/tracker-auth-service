@@ -1,0 +1,16 @@
+package dev.backend.authservice.exception.user;
+
+
+import static dev.backend.authservice.util.Constants.MESSAGE_USER_NOT_FOUND;
+
+public class UserNotFoundException extends RuntimeException {
+
+
+    public UserNotFoundException(String username) {
+        super(MESSAGE_USER_NOT_FOUND.formatted(username));
+    }
+
+    public UserNotFoundException(Long userId) {
+        super(MESSAGE_USER_NOT_FOUND.formatted(userId));
+    }
+}
